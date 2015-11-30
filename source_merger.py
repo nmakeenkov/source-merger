@@ -62,6 +62,9 @@ def print_file(_file_name, _path_to_file, _output, _defines):
             if command[0] == "#endif":
                 if_stack.pop()
                 continue
+            if command[0] == "#else":
+                if_stack[len(if_stack) - 1] = not if_stack[len(if_stack) - 1]
+                continue
 
         if not if_stack[len(if_stack) - 1]:
             continue
