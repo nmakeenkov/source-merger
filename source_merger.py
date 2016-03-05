@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# In[30]:
-
 import argparse
 import sys
 from os import listdir
@@ -11,23 +9,6 @@ from os.path import join
 from os.path import dirname
 
 
-# In[31]:
-
-def getNameToPathMap():
-    nt_path = {}
-    queue = ["."]
-    while len(queue) > 0:
-        current_path = queue.pop(0)
-        files = listdir(current_path)
-        for i in files:
-            if isfile(join_path(current_path, i)):
-                bt_path[i] = join(current_path, i)
-            else:
-                queue.append(join(current_path, i))
-    return nt_path
-
-
-# In[32]:
 
 def process(filepath, merged):
     if (filepath in merged):
@@ -65,7 +46,6 @@ def process(filepath, merged):
     return text
 
 
-# In[33]:
 
 def merge(filenames):
     merged = []
@@ -75,7 +55,6 @@ def merge(filenames):
     return text
 
 
-# In[34]:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
