@@ -36,7 +36,7 @@ def process(filepath, merged):
 	    while current_line[index] != "\"" and current_line[index] != ">":
 	        included_file_name += current_line[index]
 	        index += 1
-	    included_file_path = join(dirname(filepath) + "/", included_file_name)
+	    included_file_path = join(dirname(filepath), included_file_name)
 	    included_text = process(included_file_path, merged)
 	    if (included_text == False):
                 index = current_line.find("#include")

@@ -6,4 +6,5 @@ Start with
 python2.7 source_merger.py --help
 ```
 
-### Made with the greatest help of Michael Nemilov
+### Made by Nikolai Makeenkov
+## with the greatest help of Michael Nemilov
