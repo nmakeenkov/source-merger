@@ -49,7 +49,8 @@ def process(filepath, merged):
 
 def merge(filenames):
     merged = []
-    text = ""
+    text = "\n\n/*\nProcessed with SourceMerger by Michael Nemilov and Nikolai Makeenkov\n" + \
+        "For more info check out : https://github.com/nmakeenkov/SourceMerger\n*/"
     for filename in filenames:
         text += process(filename, merged)
     return text
